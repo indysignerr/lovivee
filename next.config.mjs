@@ -1,15 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
   images: {
-    formats: ["image/avif", "image/webp"],
-    remotePatterns: [
-      { protocol: "https", hostname: "images.unsplash.com" },
-      { protocol: "https", hostname: "maps.googleapis.com" },
-    ],
+    unoptimized: true,
   },
   experimental: {
     optimizePackageImports: ["lucide-react", "framer-motion"],
   },
+  trailingSlash: true,
 };
 
 export default nextConfig;
