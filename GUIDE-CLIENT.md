@@ -6,9 +6,11 @@ Bienvenue. Ce guide vous explique comment modifier vous-même le contenu de votr
 
 ## 1. Se connecter à l'administration
 
-Rendez-vous sur **lovive.fr/admin**, entrez l'email et le mot de passe que vous avez reçus par invitation.
+Rendez-vous sur **lovive.fr/admin** et cliquez sur **« Login with GitHub »**.
 
-> Si vous n'avez pas encore reçu l'invitation, contactez Indysigner.
+Connectez-vous avec votre compte GitHub (celui qui a été invité comme collaborateur du projet). Une fenêtre GitHub s'ouvre, autorisez l'application, vous êtes redirigé vers l'admin.
+
+> Si vous n'avez pas encore de compte GitHub ou n'avez pas été ajouté au projet, contactez Indysigner.
 
 ---
 
