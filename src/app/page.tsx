@@ -5,7 +5,7 @@ import { MenuSection } from "@/components/sections/menu";
 import { Local } from "@/components/sections/local";
 import { Gallery } from "@/components/sections/gallery";
 import { Reviews } from "@/components/sections/reviews";
-import { Reservation } from "@/components/sections/reservation";
+import { Call } from "@/components/sections/call";
 import { Footer } from "@/components/sections/footer";
 import { StickyCallCTA } from "@/components/sticky-cta";
 import {
@@ -32,10 +32,10 @@ export default function Home() {
       <Hero hero={hero} settings={settings} />
       <Formats blocks={formats.blocks} />
       <MenuSection pizzas={pizzas.items} dishes={dishes.items} />
-      <Local settings={settings} />
       <Gallery photos={gallery.items} />
+      <Local settings={settings} />
+      <Call settings={settings} />
       <Reviews />
-      <Reservation settings={settings} />
       <Footer settings={settings} />
       <StickyCallCTA phone={settings.phone} phoneRaw={settings.phoneRaw} />
     </main>

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
-import { LenisProvider } from "@/components/lenis-provider";
-import { CustomCursor } from "@/components/custom-cursor";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { getContent, type GeneralSettings } from "@/lib/content";
 
@@ -26,18 +24,10 @@ export const metadata: Metadata = {
   title: "L'Ovive — Pizzeria & Restaurant à Biot",
   description:
     "Pizzeria et restaurant à Biot. Pizzas au four, plats cuisinés maison, terrasse au calme. Réservation au 04 93 65 07 83.",
-  keywords: [
-    "pizzeria Biot",
-    "restaurant Biot",
-    "pizza Biot",
-    "L'Ovive",
-    "restaurant 06410",
-    "pizza à emporter Biot",
-  ],
+  keywords: ["pizzeria Biot", "restaurant Biot", "pizza Biot", "L'Ovive", "restaurant 06410"],
   openGraph: {
     title: "L'Ovive — Pizzeria & Restaurant à Biot",
-    description:
-      "Une table posée là, entre pierre et Méditerranée. Pizzas et plats cuisinés à Biot.",
+    description: "Une table posée là, entre pierre et Méditerranée.",
     type: "website",
     locale: "fr_FR",
     siteName: "L'Ovive",
@@ -45,17 +35,12 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "L'Ovive — Pizzeria & Restaurant à Biot",
-    description:
-      "Une table posée là, entre pierre et Méditerranée. Pizzas et plats cuisinés à Biot.",
+    description: "Une table posée là, entre pierre et Méditerranée.",
   },
   robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   const settings = getContent<GeneralSettings>("settings/general.json");
 
   const jsonLd = {
@@ -87,11 +72,8 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <LenisProvider>
-          <CustomCursor />
-          <ScrollReveal />
-          {children}
-        </LenisProvider>
+        <ScrollReveal />
+        {children}
       </body>
     </html>
   );
