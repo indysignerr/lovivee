@@ -66,6 +66,16 @@ export function Hero({ hero, settings }: Props) {
 
         {/* Right column — image */}
         <div className="relative">
+          {/* Soft turquoise wash behind the image */}
+          <div
+            className="absolute -bottom-6 -right-6 -z-10 h-[88%] w-[88%]"
+            style={{
+              borderRadius: "200px 12px 200px 12px",
+              background:
+                "linear-gradient(135deg, rgba(185,227,234,0.6) 0%, rgba(122,184,197,0.5) 100%)",
+            }}
+            aria-hidden
+          />
           <div
             className="reveal-image relative aspect-[4/5] w-full overflow-hidden bg-stone shadow-wave lg:aspect-auto lg:h-[580px]"
             style={{ borderRadius: "200px 12px 200px 12px" }}

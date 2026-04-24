@@ -10,7 +10,11 @@ const config: Config = {
     extend: {
       colors: {
         cream: "#FAF8F3",
-        night: "#1E2B4F",
+        night: {
+          DEFAULT: "#1E2B4F",
+          soft: "#2A3A66",
+          deep: "#15203D",
+        },
         stone: {
           DEFAULT: "#E8DDC9",
           warm: "#C9B896",
@@ -18,6 +22,13 @@ const config: Config = {
         turquoise: {
           DEFAULT: "#2FA5B5",
           dark: "#238898",
+          light: "#5FBFCD",
+          pale: "#B9E3EA",
+          mist: "#E5F2F4",
+        },
+        sky: {
+          DEFAULT: "#7AB8C5",
+          soft: "#A5D2DB",
         },
         muted: "#5A6378",
       },

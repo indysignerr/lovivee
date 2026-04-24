@@ -6,7 +6,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const srcPath = path.join(__dirname, "..", "public", "logo.avif");
 const outPath = path.join(__dirname, "..", "public", "logo.png");
 
-const THRESHOLD = 240;
+// Aggressive cutoff: anything with min(R,G,B) >= 200 → fully transparent
+// Soft fade between 160 and 200 to keep anti-aliasing on letter edges
+const HARD_CUTOFF = 200;
+const SOFT_START = 160;
 
 const { data, info } = await sharp(srcPath)
   .ensureAlpha()
@@ -20,14 +23,13 @@ for (let i = 0; i < result.length; i += channels) {
   const r = result[i];
   const g = result[i + 1];
   const b = result[i + 2];
-  if (r >= THRESHOLD && g >= THRESHOLD && b >= THRESHOLD) {
+  const minChan = Math.min(r, g, b);
+
+  if (minChan >= HARD_CUTOFF) {
     result[i + 3] = 0;
-  } else {
-    const minChan = Math.min(r, g, b);
-    if (minChan >= 200) {
-      const fade = (minChan - 200) / 40;
-      result[i + 3] = Math.round(255 * (1 - fade));
-    }
+  } else if (minChan >= SOFT_START) {
+    const fade = (minChan - SOFT_START) / (HARD_CUTOFF - SOFT_START);
+    result[i + 3] = Math.round(255 * (1 - fade));
   }
 }
 
@@ -35,4 +37,4 @@ await sharp(result, { raw: { width, height, channels } })
   .png({ quality: 95, compressionLevel: 9 })
   .toFile(outPath);
 
-console.log(`Saved ${outPath} (${width}×${height}) with transparent background.`);
+console.log(`Saved ${outPath} (${width}×${height}) — transparent bg, cutoff=${HARD_CUTOFF}.`);

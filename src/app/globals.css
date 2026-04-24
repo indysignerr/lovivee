@@ -12,6 +12,10 @@
   --text-light: #FAF8F3;
   --color-primary: #2FA5B5;
   --color-primary-dark: #238898;
+  --color-primary-light: #5FBFCD;
+  --color-primary-pale: #B9E3EA;
+  --color-primary-mist: #E5F2F4;
+  --color-sky: #7AB8C5;
   --stone-warm: #C9B896;
   --brick-1: #8E8B85;
   --brick-2: #A6A39C;
@@ -57,33 +61,34 @@ body {
   overflow-x: hidden;
 }
 
-/* Brick wall — gray nuances, very subtle */
+/* Brick wall — real brick pattern with gray nuances */
 .brick-wall {
-  --b1: rgba(142, 139, 133, 0.10);
-  --b2: rgba(166, 163, 156, 0.08);
-  --b3: rgba(192, 188, 180, 0.10);
-  background-color: transparent;
-  background-image:
-    linear-gradient(var(--b1) 2px, transparent 2px),
-    linear-gradient(90deg, var(--b2) 2px, transparent 2px),
-    linear-gradient(var(--b1) 2px, transparent 2px),
-    linear-gradient(90deg, var(--b3) 2px, transparent 2px);
-  background-size: 120px 60px, 120px 60px, 120px 60px, 120px 60px;
-  background-position: 0 0, 0 0, 60px 30px, 60px 30px;
+  background-image: url("/images/brick-wall.svg");
+  background-size: 240px 120px;
+  background-repeat: repeat;
 }
 
-.brick-wall-strong {
-  --b1: rgba(142, 139, 133, 0.22);
-  --b2: rgba(166, 163, 156, 0.18);
-  --b3: rgba(192, 188, 180, 0.22);
-  background-color: #ECE6D9;
-  background-image:
-    linear-gradient(var(--b1) 2px, transparent 2px),
-    linear-gradient(90deg, var(--b2) 2px, transparent 2px),
-    linear-gradient(var(--b1) 2px, transparent 2px),
-    linear-gradient(90deg, var(--b3) 2px, transparent 2px);
-  background-size: 120px 60px, 120px 60px, 120px 60px, 120px 60px;
-  background-position: 0 0, 0 0, 60px 30px, 60px 30px;
+.brick-wall-soft {
+  background-image: url("/images/brick-wall.svg");
+  background-size: 240px 120px;
+  background-repeat: repeat;
+  opacity: 0.55;
+}
+
+/* Brick band — full-width divider between sections */
+.brick-band {
+  background-image: url("/images/brick-wall.svg");
+  background-size: 200px 100px;
+  background-repeat: repeat;
+  position: relative;
+}
+
+.brick-band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(250,248,243,0.0) 0%, rgba(250,248,243,0.0) 50%, rgba(30,43,79,0.04) 100%);
+  pointer-events: none;
 }
 
 /* Section title underline animation */

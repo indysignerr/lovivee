@@ -7,6 +7,7 @@ import { Gallery } from "@/components/sections/gallery";
 import { Reviews } from "@/components/sections/reviews";
 import { Call } from "@/components/sections/call";
 import { Footer } from "@/components/sections/footer";
+import { BrickBand } from "@/components/sections/brick-band";
 import { StickyCallCTA } from "@/components/sticky-cta";
 import {
   getContent,
@@ -33,6 +34,7 @@ export default function Home() {
       <Formats blocks={formats.blocks} />
       <MenuSection pizzas={pizzas.items} dishes={dishes.items} />
       <Gallery photos={gallery.items} />
+      <BrickBand />
       <Local settings={settings} />
       <Call settings={settings} />
       <Reviews />
