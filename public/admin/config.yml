@@ -1,0 +1,113 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+locale: "fr"
+
+site_url: https://lovive.fr
+display_url: https://lovive.fr
+logo_url: /logo.svg
+
+collections:
+  - name: "settings"
+    label: "Paramètres du site"
+    files:
+      - name: "general"
+        label: "Informations générales"
+        file: "content/settings/general.json"
+        fields:
+          - { label: "Nom du restaurant", name: "name", widget: "string" }
+          - { label: "Téléphone (affiché)", name: "phone", widget: "string" }
+          - { label: "Téléphone (lien tel:)", name: "phoneRaw", widget: "string", hint: "Format international, ex : +33493650783" }
+          - { label: "Adresse", name: "address", widget: "string" }
+          - { label: "Code postal et ville", name: "city", widget: "string" }
+          - label: "Horaires"
+            name: "hours"
+            widget: "object"
+            fields:
+              - { label: "Lundi à Vendredi", name: "weekdays", widget: "string", default: "12h–14h / 19h–21h" }
+              - { label: "Samedi", name: "saturday", widget: "string", default: "19h–21h" }
+              - { label: "Fermeture", name: "closed", widget: "string", default: "Samedi midi & dimanche" }
+
+  - name: "pizzas"
+    label: "Carte — Pizzeria"
+    files:
+      - name: "pizzas"
+        label: "Liste des pizzas"
+        file: "content/menu/pizzas.json"
+        fields:
+          - label: "Pizzas"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Nom de la pizza", name: "name", widget: "string" }
+              - { label: "Ingrédients", name: "ingredients", widget: "string" }
+              - { label: "Prix (€)", name: "price", widget: "number", value_type: "float", step: 0.5 }
+              - { label: "Disponible", name: "available", widget: "boolean", default: true }
+
+  - name: "restaurant"
+    label: "Carte — Restaurant"
+    files:
+      - name: "restaurant"
+        label: "Liste des plats"
+        file: "content/menu/restaurant.json"
+        fields:
+          - label: "Plats"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Nom du plat", name: "name", widget: "string" }
+              - { label: "Accompagnement / détail", name: "detail", widget: "string", required: false }
+              - { label: "Prix (€)", name: "price", widget: "number", value_type: "float", step: 0.5, required: false }
+              - { label: "Texte libre pour le prix", name: "price_text", widget: "string", required: false, hint: "Laissez vide si un prix numérique est renseigné. Ex : voir ardoise" }
+              - { label: "Disponible", name: "available", widget: "boolean", default: true }
+
+  - name: "hero"
+    label: "Page d'accueil — Hero"
+    files:
+      - name: "hero"
+        label: "Contenu du hero"
+        file: "content/sections/hero.json"
+        fields:
+          - { label: "Titre principal", name: "title", widget: "string", default: "L'Ovive." }
+          - { label: "Sous-titre", name: "subtitle", widget: "string", default: "Pizzeria · Restaurant · Biot." }
+          - { label: "Phrase d'ambiance", name: "tagline", widget: "text" }
+          - { label: "Photo du hero", name: "image", widget: "image" }
+          - { label: "Texte alternatif", name: "imageAlt", widget: "string" }
+
+  - name: "gallery"
+    label: "Galerie photos"
+    files:
+      - name: "photos"
+        label: "Photos de l'ambiance"
+        file: "content/gallery/photos.json"
+        fields:
+          - label: "Photos"
+            name: "items"
+            widget: "list"
+            max: 8
+            min: 1
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Texte alternatif", name: "alt", widget: "string" }
+              - { label: "Ordre d'affichage", name: "order", widget: "number", default: 1 }
+
+  - name: "formats"
+    label: "Section — 3 formats"
+    files:
+      - name: "formats"
+        label: "Contenu des 3 blocs"
+        file: "content/sections/formats.json"
+        fields:
+          - label: "Blocs"
+            name: "blocks"
+            widget: "list"
+            max: 3
+            min: 3
+            fields:
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Phrase", name: "text", widget: "string" }
+              - { label: "Icône (nom Lucide)", name: "icon", widget: "select", options: ["Utensils", "Pizza", "ChefHat", "UtensilsCrossed", "Soup", "CookingPot"] }

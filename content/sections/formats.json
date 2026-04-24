@@ -1,0 +1,19 @@
+{
+  "blocks": [
+    {
+      "title": "Sur place",
+      "text": "Attablez-vous, on s'occupe du reste.",
+      "icon": "Utensils"
+    },
+    {
+      "title": "Pizzas à emporter",
+      "text": "Repartez les mains chargées.",
+      "icon": "Pizza"
+    },
+    {
+      "title": "Restaurant",
+      "text": "Plats cuisinés, sur place uniquement.",
+      "icon": "ChefHat"
+    }
+  ]
+}

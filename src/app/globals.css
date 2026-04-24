@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #FAF8F3;
+  --bg-secondary: #1E2B4F;
+  --bg-stone: #E8DDC9;
+  --bg-accent: #2FA5B5;
+  --text-primary: #1E2B4F;
+  --text-secondary: #5A6378;
+  --text-light: #FAF8F3;
+  --color-primary: #2FA5B5;
+  --color-primary-dark: #238898;
+  --stone-warm: #C9B896;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Stone texture pattern */
+.stone-texture {
+  background-image: radial-gradient(circle at 20% 30%, rgba(201, 184, 150, 0.18) 0%, transparent 8%),
+    radial-gradient(circle at 75% 60%, rgba(201, 184, 150, 0.14) 0%, transparent 9%),
+    radial-gradient(circle at 50% 85%, rgba(201, 184, 150, 0.16) 0%, transparent 7%),
+    radial-gradient(circle at 88% 18%, rgba(201, 184, 150, 0.12) 0%, transparent 6%),
+    radial-gradient(circle at 12% 75%, rgba(201, 184, 150, 0.15) 0%, transparent 8%),
+    radial-gradient(circle at 60% 25%, rgba(201, 184, 150, 0.10) 0%, transparent 5%);
+  background-size: 320px 320px;
+  background-repeat: repeat;
+}
+
+.noise-overlay {
+  position: relative;
+}
+
+.noise-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+/* Magnetic cursor target */
+[data-cursor="magnetic"] {
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-cursor="hover"] {
+  cursor: pointer;
+}
+
+/* Custom underline */
+.underline-curve {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-curve::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 8' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'%3E%3Cpath d='M0,5 Q25,0 50,4 T100,3' stroke='%232FA5B5' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.underline-curve.in-view::after {
+  transform: scaleX(1);
+}
+
+/* Section title underline animation */
+.title-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 14px;
+}
+
+.title-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.title-underline.in-view::after {
+  transform: scaleX(1);
+}
+
+/* Reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-image {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-image.in-view {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Word reveal hero */
+.word-reveal .word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: wordReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes wordReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Wave button */
+.wave-btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.wave-btn::before {
+  content: "";
+  position: absolute;
+  top: var(--y, 50%);
+  left: var(--x, 50%);
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease-out, height 0.6s ease-out;
+  z-index: -1;
+}
+
+.wave-btn:hover::before {
+  width: 500px;
+  height: 500px;
+}
+
+/* Focus states */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Smooth fade for hero image overlay */
+.hero-overlay {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 60%,
+    rgba(30, 43, 79, 0.1) 100%
+  );
+}
+
+/* Custom cursor */
+.custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: transform 0.12s ease-out, width 0.3s ease, height 0.3s ease,
+    background 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+}
+
+/* Hide scrollbar utility but allow scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

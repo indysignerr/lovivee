@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" fill="none">
+  <defs>
+    <pattern id="stones" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2.4" fill="#C9B896"/>
+      <circle cx="9" cy="9" r="2.0" fill="#A99775"/>
+      <circle cx="11" cy="2" r="1.5" fill="#D9CBAA"/>
+      <circle cx="2" cy="11" r="1.7" fill="#BFAA85"/>
+      <rect width="14" height="14" fill="#E8DDC9" opacity="0.25"/>
+    </pattern>
+    <clipPath id="clipO">
+      <circle cx="68" cy="50" r="28"/>
+    </clipPath>
+  </defs>
+
+  <!-- l' -->
+  <text x="6" y="66" font-family="Playfair Display, Georgia, serif" font-style="italic" font-weight="700" font-size="58" fill="#1E2B4F">l'</text>
+
+  <!-- O turquoise circle -->
+  <circle cx="68" cy="50" r="26" fill="#2FA5B5"/>
+
+  <!-- stone mosaic crescent inside O (bottom half) -->
+  <g clip-path="url(#clipO)">
+    <path d="M40 56 Q68 92 96 56 L96 80 L40 80 Z" fill="url(#stones)"/>
+    <path d="M40 56 Q68 92 96 56" fill="none" stroke="#1E2B4F" stroke-width="1.2" opacity="0.35"/>
+  </g>
+
+  <!-- vive -->
+  <text x="100" y="72" font-family="Playfair Display, Georgia, serif" font-style="italic" font-weight="700" font-size="64" fill="#1E2B4F">vive</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E2B4F"/>
+      <stop offset="100%" stop-color="#5A6378"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g2)"/>
+  <ellipse cx="400" cy="520" rx="280" ry="170" fill="#FAF8F3"/>
+  <rect x="280" y="450" width="240" height="140" rx="14" fill="#8B5A3C"/>
+  <rect x="290" y="460" width="220" height="120" rx="10" fill="#A06B45"/>
+  <rect x="160" y="480" width="120" height="80" rx="6" fill="#E8DDC9"/>
+  <rect x="520" y="480" width="120" height="80" rx="6" fill="#7B8A45" opacity="0.8"/>
+  <text x="400" y="820" font-family="Inter,sans-serif" font-size="22" fill="#FAF8F3" text-anchor="middle" letter-spacing="6">TARTARE · PHOTO À VENIR</text>
+</svg>

@@ -1,0 +1,12 @@
+{
+  "name": "L'Ovive",
+  "phone": "04 93 65 07 83",
+  "phoneRaw": "+33493650783",
+  "address": "329 route d'Antibes",
+  "city": "06410 Biot",
+  "hours": {
+    "weekdays": "12h–14h / 19h–21h",
+    "saturday": "19h–21h",
+    "closed": "Samedi midi & dimanche"
+  }
+}

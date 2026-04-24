@@ -1,0 +1,17 @@
+{
+  "items": [
+    { "name": "Marguerite", "ingredients": "tomate, fromage, olives", "price": 11.00, "available": true },
+    { "name": "Vésuvio", "ingredients": "tomate, jambon, fromage, olives", "price": 12.00, "available": true },
+    { "name": "Reine", "ingredients": "tomate, jambon, champignons, fromage, olives", "price": 13.00, "available": true },
+    { "name": "Napolitaine", "ingredients": "tomate, anchois, fromage, olives", "price": 12.00, "available": true },
+    { "name": "L'Ovive", "ingredients": "tomate, artichauts, poivrons, fromage, olives, champignons", "price": 14.00, "available": true },
+    { "name": "Campagnarde", "ingredients": "crème, lardons, champignons, fromage, reblochon, œuf", "price": 14.50, "available": true },
+    { "name": "Calzone", "ingredients": "chausson tomate, jambon, champignons, fromage, œuf", "price": 14.50, "available": true },
+    { "name": "Cannibale", "ingredients": "tomate, viande hachée, champignons, fromage, œuf", "price": 14.50, "available": true },
+    { "name": "4 Fromages", "ingredients": "tomate, chèvre, mozzarella, cantal, roquefort, olives", "price": 14.50, "available": true },
+    { "name": "Exotique", "ingredients": "tomate, poivrons, ananas, fromage, curry, poulet", "price": 14.50, "available": true },
+    { "name": "Montagnarde", "ingredients": "tomate, champignons, fromage, reblochon, jambon", "price": 14.50, "available": true },
+    { "name": "Chorizo", "ingredients": "tomate, chorizo, poivrons, fromage", "price": 14.50, "available": true },
+    { "name": "Italienne", "ingredients": "tomate, mozzarella, artichauts, jambon cru", "price": 13.50, "available": true }
+  ]
+}

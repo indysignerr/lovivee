@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "image": "/images/gallery-1.svg", "alt": "Pizza signature L'Ovive sortie du four", "order": 1 },
+    { "image": "/images/gallery-2.svg", "alt": "Plat de tartare et frites maison", "order": 2 },
+    { "image": "/images/gallery-3.svg", "alt": "Carte du jour à l'ardoise", "order": 3 },
+    { "image": "/images/gallery-4.svg", "alt": "Salle du restaurant en soirée", "order": 4 }
+  ]
+}

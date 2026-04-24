@@ -1,0 +1,15 @@
+{
+  "items": [
+    { "name": "Salade Italienne", "detail": "", "price": 14.50, "available": true },
+    { "name": "Tartare de Bœuf", "detail": "frites et salade", "price": 17.50, "available": true },
+    { "name": "Fish and Chips", "detail": "", "price": 18.50, "available": true },
+    { "name": "Moelleux de Poulet", "detail": "sauce cèpes ou roquefort, frites, salade", "price": 17.50, "available": true },
+    { "name": "Entrecôte", "detail": "sauce cèpes ou roquefort, frites, salade", "price": 24.50, "available": true },
+    { "name": "Cheeseburger maison", "detail": "frites et salade", "price": 17.50, "available": true },
+    { "name": "Mixte Tapas", "detail": "frites et salade", "price": 16.50, "available": true },
+    { "name": "Chicken Burger maison", "detail": "frites et salade", "price": 17.00, "available": true },
+    { "name": "Carpaccio de Bœuf aux artichauts", "detail": "frites et salade", "price": 17.50, "available": true },
+    { "name": "Menu Enfant", "detail": "", "price": 10.00, "available": true },
+    { "name": "Suggestions du jour", "detail": "", "price_text": "voir ardoise", "available": true }
+  ]
+}
