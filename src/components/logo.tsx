@@ -9,11 +9,11 @@ export function Logo({
   variant?: "default" | "light";
 }) {
   return (
-    <span className={className} aria-label="L'Ovive — accueil">
+    <span className={className} aria-label="L'Ovive — accueil" style={{ display: "inline-block" }}>
       <Image
-        src="/logo.avif"
+        src="/logo.png"
         alt="L'Ovive"
-        width={Math.round(height * 3.2)}
+        width={Math.round(height * 2.7)}
         height={height}
         priority
         unoptimized
