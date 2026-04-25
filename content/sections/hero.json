@@ -3,5 +3,15 @@
   "subtitle": "Pizzeria · Restaurant · Biot.",
   "tagline": "Une table posée là, entre pierre et Méditerranée.",
   "image": "/images/hero.svg",
-  "imageAlt": "Plat signature L'Ovive"
+  "imageAlt": "Plat signature L'Ovive",
+  "lunchFormula": {
+    "label": "Formule du Midi",
+    "price": 21.90,
+    "description": "Plat du jour ou pizza + dessert + café"
+  },
+  "lunchSingle": {
+    "label": "Plat du jour seul",
+    "price": 15.90
+  },
+  "reservationNote": "Pensez à réserver."
 }

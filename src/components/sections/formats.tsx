@@ -1,7 +1,7 @@
-import { Utensils, Pizza, ChefHat, type LucideIcon } from "lucide-react";
+import { Utensils, Pizza, ChefHat, Users, type LucideIcon } from "lucide-react";
 import type { FormatBlock } from "@/lib/content";
 
-const iconMap: Record<string, LucideIcon> = { Utensils, Pizza, ChefHat };
+const iconMap: Record<string, LucideIcon> = { Utensils, Pizza, ChefHat, Users };
 
 export function Formats({ blocks }: { blocks: FormatBlock[] }) {
   return (

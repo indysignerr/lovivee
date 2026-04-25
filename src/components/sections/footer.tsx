@@ -40,8 +40,8 @@ export function Footer({ settings }: { settings: GeneralSettings }) {
               Légal
             </h4>
             <ul className="mt-5 space-y-2 text-sm">
-              <li><a href="#" className="transition-colors hover:text-turquoise">Mentions légales</a></li>
-              <li><a href="#" className="transition-colors hover:text-turquoise">Politique de confidentialité</a></li>
+              <li><a href="/mentions-legales/" className="transition-colors hover:text-turquoise">Mentions légales</a></li>
+              <li><a href="/politique-de-confidentialite/" className="transition-colors hover:text-turquoise">Politique de confidentialité</a></li>
               <li><a href="/admin/" className="transition-colors hover:text-turquoise">Administration</a></li>
             </ul>
           </div>

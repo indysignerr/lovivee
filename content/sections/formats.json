@@ -1,9 +1,9 @@
 {
   "blocks": [
     {
-      "title": "Sur place",
-      "text": "Attablez-vous, on s'occupe du reste.",
-      "icon": "Utensils"
+      "title": "Groupes bienvenus",
+      "text": "Le restaurant accueille les groupes — pensez à réserver.",
+      "icon": "Users"
     },
     {
       "title": "Pizzas à emporter",

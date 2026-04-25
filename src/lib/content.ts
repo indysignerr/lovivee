@@ -39,6 +39,9 @@ export type HeroContent = {
   tagline: string;
   image: string;
   imageAlt: string;
+  lunchFormula?: { label: string; price: number; description: string };
+  lunchSingle?: { label: string; price: number };
+  reservationNote?: string;
 };
 
 export type FormatBlock = { title: string; text: string; icon: string };
