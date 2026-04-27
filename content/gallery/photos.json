@@ -1,8 +1,8 @@
 {
   "items": [
-    { "image": "/images/gallery-1.svg", "alt": "Pizza signature L'Ovive sortie du four", "order": 1 },
-    { "image": "/images/gallery-2.svg", "alt": "Plat de tartare et frites maison", "order": 2 },
-    { "image": "/images/gallery-3.svg", "alt": "Carte du jour à l'ardoise", "order": 3 },
-    { "image": "/images/gallery-4.svg", "alt": "Salle du restaurant en soirée", "order": 4 }
+    { "image": "/images/gallery-1.webp", "alt": "Moules farcies au persil, frites maison et salade", "order": 1 },
+    { "image": "/images/gallery-2.webp", "alt": "Plat de bœuf en sauce, gnocchi et parmesan", "order": 2 },
+    { "image": "/images/gallery-3.webp", "alt": "Fish and Chips, frites maison, salade et sauce tartare", "order": 3 },
+    { "image": "/images/gallery-4.webp", "alt": "Salade Italienne, sauce crémeuse, croûtons et tomates", "order": 4 }
   ]
 }
