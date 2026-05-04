@@ -2,8 +2,8 @@
   "title": "L'Ovive.",
   "subtitle": "Pizzeria · Restaurant · Biot.",
   "tagline": "Une table posée là, entre pierre et Méditerranée.",
-  "image": "/images/hero.svg",
-  "imageAlt": "Plat signature L'Ovive",
+  "image": "/images/hero.jpg",
+  "imageAlt": "Le vieux pont de Biot, illuminé en bleu, à deux pas du restaurant",
   "lunchFormula": {
     "label": "Formule du Midi",
     "price": 21.90,
