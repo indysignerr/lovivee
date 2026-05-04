@@ -2,8 +2,8 @@ backend:
   name: github
   repo: indysignerr/lovivee
   branch: main
-  base_url: https://decap-oauth.indysigner.workers.dev
-  auth_endpoint: auth
+  base_url: https://lovive.fr
+  auth_endpoint: oauth/auth
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
