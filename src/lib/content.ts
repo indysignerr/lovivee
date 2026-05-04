@@ -18,6 +18,17 @@ export type GeneralSettings = {
   hours: { weekdays: string; saturday: string; closed: string };
 };
 
+/**
+ * Universal "open in user's GPS app" link.
+ * - iOS Safari: offers Apple Maps (with destination prefilled)
+ * - Android: opens Google Maps native app
+ * - Desktop: opens Google Maps web
+ */
+export function gpsLink(address: string, city: string) {
+  const q = encodeURIComponent(`${address}, ${city}`);
+  return `https://www.google.com/maps/dir/?api=1&destination=${q}`;
+}
+
 export type Pizza = {
   name: string;
   ingredients: string;

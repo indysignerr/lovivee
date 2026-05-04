@@ -8,7 +8,6 @@ import { Reviews } from "@/components/sections/reviews";
 import { Call } from "@/components/sections/call";
 import { Footer } from "@/components/sections/footer";
 import { BrickBand } from "@/components/sections/brick-band";
-import { StickyCallCTA } from "@/components/sticky-cta";
 import {
   getContent,
   type GeneralSettings,
@@ -39,7 +38,6 @@ export default function Home() {
       <Call settings={settings} />
       <Reviews />
       <Footer settings={settings} />
-      <StickyCallCTA phone={settings.phone} phoneRaw={settings.phoneRaw} />
     </main>
   );
 }

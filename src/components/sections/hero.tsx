@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Phone, ArrowDown, UtensilsCrossed } from "lucide-react";
-import type { GeneralSettings, HeroContent } from "@/lib/content";
+import { Phone, ArrowDown, UtensilsCrossed, Navigation } from "lucide-react";
+import { gpsLink, type GeneralSettings, type HeroContent } from "@/lib/content";
 
 type Props = { hero: HeroContent; settings: GeneralSettings };
 
@@ -117,7 +117,7 @@ export function Hero({ hero, settings }: Props) {
 
           {/* Secondary actions */}
           <div
-            className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center"
+            className="mt-8 flex flex-wrap items-center gap-3"
             style={{
               opacity: 0,
               animation: "wordReveal 0.8s cubic-bezier(0.22,1,0.36,1) 1.05s forwards",
@@ -130,7 +130,16 @@ export function Hero({ hero, settings }: Props) {
               Voir la carte
               <ArrowDown size={14} strokeWidth={2} className="transition-transform group-hover:translate-y-0.5" />
             </a>
-            <span className="text-sm text-muted">
+            <a
+              href={gpsLink(settings.address, settings.city)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center justify-center gap-2 rounded-full border border-turquoise/40 bg-turquoise-mist/40 px-5 py-3 text-sm font-medium text-turquoise-dark transition-colors hover:border-turquoise hover:bg-turquoise-mist"
+            >
+              <Navigation size={14} strokeWidth={2} className="transition-transform group-hover:translate-x-0.5" />
+              S'y rendre
+            </a>
+            <span className="ml-1 text-sm text-muted">
               <span className="font-medium uppercase tracking-[0.18em] text-night/65">Ouvert</span>
               <span className="mx-2.5">·</span>
               {settings.hours.weekdays}

@@ -1,5 +1,5 @@
-import { MapPin, Clock, Phone } from "lucide-react";
-import type { GeneralSettings } from "@/lib/content";
+import { MapPin, Clock, Phone, Navigation } from "lucide-react";
+import { gpsLink, type GeneralSettings } from "@/lib/content";
 
 export function Local({ settings }: { settings: GeneralSettings }) {
   return (
@@ -57,9 +57,18 @@ export function Local({ settings }: { settings: GeneralSettings }) {
           <ul className="mt-10 space-y-7 text-cream/85">
             <li className="flex items-start gap-5">
               <MapPin size={18} strokeWidth={1.6} className="mt-1 shrink-0 text-turquoise" />
-              <div>
+              <div className="flex-1">
                 <p className="text-base">{settings.address}</p>
                 <p className="text-base">{settings.city}</p>
+                <a
+                  href={gpsLink(settings.address, settings.city)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-2 rounded-full border border-turquoise/50 bg-turquoise/10 px-4 py-2 text-sm font-medium text-turquoise-light transition-colors hover:bg-turquoise/20 hover:text-cream"
+                >
+                  <Navigation size={13} strokeWidth={2} />
+                  Itinéraire
+                </a>
               </div>
             </li>
             <li className="flex items-start gap-5">
